@@ -1,8 +1,5 @@
-import Data.Char (digitToInt)
-
-asInt xs = loop 0 xs
-
-loop :: Int -> String -> Int
-loop acc [] = acc
-loop acc (x:xs) = let acc' = acc * 10 + digitToInt x
-                  in loop acc' xs
+main :: IO ()
+main = do putStrLn "What is 2 + 2?"
+          x <- readLn
+          if x == 4 then do putStrLn "You're right!"
+                    else do putStrLn "You're wrong!"
